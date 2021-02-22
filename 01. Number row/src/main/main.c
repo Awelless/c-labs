@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-#define NUMBER_MAX_SIZE 1000
+#define NUMBER_MAX_LENGTH 1000
 
 char isValid(const char number[]) {
     if (number[0] == 0) {
@@ -9,7 +9,7 @@ char isValid(const char number[]) {
     }
 
     size_t i;
-    for (i = 0; i < NUMBER_MAX_SIZE && number[i] != 0; ++i) {
+    for (i = 0; i < NUMBER_MAX_LENGTH && number[i] != 0; ++i) {
         if (number[i] < '0' || number[i] > '9') {
             return 0;
         }
@@ -21,7 +21,7 @@ char isValid(const char number[]) {
 int main() {
     printf("Enter a number: ");
 
-    char number[NUMBER_MAX_SIZE];
+    char number[NUMBER_MAX_LENGTH];
     scanf("%s", number);
 
     if (isValid(number) == 0) {
@@ -34,7 +34,7 @@ int main() {
     char isOrderedDescending = 1;
 
     size_t i;
-    for (i = 1; i < NUMBER_MAX_SIZE && number[i] != 0; ++i) {
+    for (i = 1; i < NUMBER_MAX_LENGTH && number[i] != 0; ++i) {
         if (number[i] < prevNumber) {
             isOrderedAscending = 0;
         }
