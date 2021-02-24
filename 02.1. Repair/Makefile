@@ -1,4 +1,4 @@
-all: clean buildMain buildTest runTest
+all: clean buildMain buildTest runTest runValgrind
 
 buildMain:
 	mkdir -p target/main
