@@ -13,7 +13,7 @@ double factorial(unsigned short x) {
     return ans;
 }
 
-void readDouble(double *x) {
+double readDouble() {
     double value;
     char c;
 
@@ -22,17 +22,17 @@ void readDouble(double *x) {
         while (getchar() != '\n') {}
     }
 
-    *x = value;
+    return value;
 }
 
 int main() {
     printf("Enter x: ");
     double x;
-    readDouble(&x);
+    x = readDouble();
 
     printf("Enter epsilon: ");
     double e;
-    readDouble(&e);
+    e = readDouble();
 
     double sinX = sin(x);
 

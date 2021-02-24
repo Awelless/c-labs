@@ -20,11 +20,8 @@ char isValid(const char number[]) {
 
 int main() {
     printf("Enter a number: ");
-
     char number[NUMBER_MAX_LENGTH];
-    scanf("%s", number);
-
-    if (isValid(number) == 0) {
+    if (scanf("%s", number) != 1 || isValid(number) == 0) {
         printf("Number isn't valid\n");
         return 0;
     }
